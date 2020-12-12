@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+yes | vdirsyncer discover
+vdirsyncer metasync
+vdirsyncer sync
