@@ -1,5 +1,10 @@
 #!/usr/bin/sh
 
+addgroup -g "$GID" cronuser
+adduser -D -u "$UID" -G cronuser cronuser
+addgroup cronuser tty
+chown cronuser /src
+
 echo "
 --Initializing container--
 User uid: $(id -u cronuser)
