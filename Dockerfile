@@ -4,7 +4,7 @@ ENV VDIRSYNCER_CONFIG="/src/config" \
     CRON="* * * * *" \
     UID="1001" \
     GID="1001" \
-    DEBUG="false"
+    VERBOSITY=""
 
 RUN pip install vdirsyncer
 

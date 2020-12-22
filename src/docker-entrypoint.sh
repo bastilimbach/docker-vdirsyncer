@@ -10,7 +10,7 @@ echo "
 User uid: $(id -u cronuser)
 User gid: $(id -g cronuser)
 Cron: $CRON
-Debug: $DEBUG
+Verbosity: $VERBOSITY
 vdirsyncer config location: $VDIRSYNCER_CONFIG
 "
 

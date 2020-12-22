@@ -1,12 +1,12 @@
 #!/usr/bin/sh
 
-if [ "$DEBUG" = true ] ; then
-    yes | vdirsyncer discover -vdebug
-    vdirsyncer metasync -vdebug
-    vdirsyncer sync -vdebug
-    else
+if [ -z "$VERBOSITY" ]; then
     yes | vdirsyncer discover
     vdirsyncer metasync
     vdirsyncer sync
+    else
+    yes | vdirsyncer --verbosity=$VERBOSITY discover
+    vdirsyncer --verbosity=$VERBOSITY metasync
+    vdirsyncer --verbosity=$VERBOSITY sync
 fi
 
