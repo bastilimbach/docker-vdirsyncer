@@ -3,7 +3,8 @@ FROM python:3.6-alpine
 ENV VDIRSYNCER_CONFIG="/src/config" \
     CRON="* * * * *" \
     UID="1001" \
-    GID="1001"
+    GID="1001" \
+    DEBUG="false"
 
 RUN pip install vdirsyncer
 

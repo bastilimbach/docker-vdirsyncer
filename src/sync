@@ -1,5 +1,12 @@
 #!/usr/bin/sh
 
-yes | vdirsyncer discover
-vdirsyncer metasync
-vdirsyncer sync
+if [ "$DEBUG" = true ] ; then
+    yes | vdirsyncer discover -vdebug
+    vdirsyncer metasync -vdebug
+    vdirsyncer sync -vdebug
+    else
+    yes | vdirsyncer discover
+    vdirsyncer metasync
+    vdirsyncer sync
+fi
+
